@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Area Checker</title>
+    <link rel="stylesheet" href="/zip.css">
+</head>
+<body>
+    <h1>Check if we deliver to your area</h1>
+    <p>Enter your Zip Code:</p>
+    <input type="text" id="zipCodeInput" placeholder="Enter your zip code">
+    <button onclick="checkDeliveryArea()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkDeliveryArea() {
+            const validZipCode = "194XX"; // Replace with the valid zip code for Upplands Väsby
+
+            const zipCode = document.getElementById("zipCodeInput").value;
+
+            if (zipCode === "") {
+                document.getElementById("result").innerText = "Please enter your zip code.";
+            } else if (zipCode === validZipCode) {
+                document.getElementById("result").innerText = "We deliver to your area!";
+            } else {
+                document.getElementById("result").innerText = "Sorry, we don't deliver to this area.";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
